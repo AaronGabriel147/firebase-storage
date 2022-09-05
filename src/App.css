@@ -3,7 +3,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgba(17, 16, 29, 0.562);
+  background-color: #282c34;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -43,6 +43,7 @@ body {
   background-attachment: fixed;
   background-color: #282c34;
   /* background: linear-gradient(#6600FF, #43007e); */
+
 }
 
 
@@ -80,6 +81,37 @@ button {
 
 button:hover {
   background: radial-gradient(circle at 3% 7.4%, rgb(103, 182, 235) 0%, rgb(142, 182, 255) 90%);
+}
+
+.input-cont {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+input {
+  font-family: inherit;
+  border: 2px solid rgb(255, 255, 255);
+  outline: 0;
+  font-size: 1.1rem;
+  padding: 7px 0 6px 11px;
+  background: transparent;
+  color: white;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.653), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+}
+
+input:focus {
+  padding: 7px 0 6px 11px;
+  border-width: 2px;
+  /* border-image: linear-gradient(to right, rgb(0, 0, 255), rgb(140, 0, 255), rgb(0, 208, 204)); */
+  border-image: radial-gradient(circle at 3% 7.4%, rgb(0, 144, 243) 0%, rgb(0, 86, 240) 90%);
+  border-image-slice: 1;
 }
 
 
