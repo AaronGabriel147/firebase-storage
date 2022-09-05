@@ -1,11 +1,17 @@
 import './App.css';
 
-function App() {
+
+export default function App() {
+
+
   return (
     <div className="app">
-      <p>yo</p>
-    </div>
+      <h1>React Template</h1>
+      <p>Lorem ipsum. This is a p tag</p>
+      <div className="border"></div>
+      <button>Submit</button>
+    </div >
   );
 }
 
-export default App;
+
