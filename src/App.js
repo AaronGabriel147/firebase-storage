@@ -1,51 +1,6 @@
-// import './App.css';
-// import { useState } from "react";
-// import { storage } from "./firebase"
-// import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-
-// export default function App() {
-//   const [image, setImage] = useState(null);
-//   const [url, setUrl] = useState(null);
-
-
-//   const handleImageChange = (e) => {
-//     if (e.target.files[0]) {
-//       setImage(e.target.files[0]);
-//     }
-//   };
-//   // console.log(image)
-
-
-//   const handleSubmit = () => {
-//     const imageRef = ref(storage, "image");
-//     uploadBytes(imageRef, image)
-//       .then(() => {
-//         getDownloadURL(imageRef)
-//           .then((url) => {
-//             setUrl(url);
-//           })
-//           .catch((error) => {
-//             console.log(error.message, "Error getting image url")
-//           });
-//         setImage(null);
-//       })
-//   }
-
-//   return (
-//     <div className="app">
-
-//       <input
-//         type="file"
-//         onChange={handleImageChange}
-//       />
-
-//       <button onClick={handleSubmit}>Upload</button>
-
-//       <img src={url} height="325px" width="500px" />
-
-//     </div >
-//   );
-// }
+// Apply database to allow for order, delete, and maybe even full size image on click
+// Add progress bar
+// MAke image upload busson, 1 button rather than 2!
 
 
 // _____________________________________________________________________
@@ -105,8 +60,8 @@ function App() {
       <button onClick={uploadFile}>Submit Upload</button>
 
       <div className="img-cont">
-        {imageUrls.map((url, id) => {
-          console.log('yolo!!', id)
+        {imageUrls.reverse().map((url, id) => {
+          console.log('yolo!!', url)
           return < img src={url} key={id} />
         })}
       </div>
