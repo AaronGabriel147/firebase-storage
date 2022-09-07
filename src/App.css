@@ -61,19 +61,24 @@ p {
   font-size: 1.5rem;
 }
 
+
+.btn-cont {
+  display: flex;
+}
+
 button {
+  width: 14rem;
   font-weight: 600;
   min-width: 7rem;
-  padding: .5rem 1.1rem;
-  /* margin-top: 3rem; */
-  /* margin-bottom: 1.5rem; */
+  padding: .7rem 1.7rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
   border: none;
-  font-size: 15px;
+  font-size: 18px;
   text-transform: uppercase;
   cursor: pointer;
   color: white;
   outline: none;
-  border-radius: .2rem;
   background: radial-gradient(circle at 3% 7.4%, rgb(0, 144, 243) 0%, rgb(0, 86, 240) 90%);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.653), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   letter-spacing: 1px;
@@ -86,6 +91,8 @@ button:hover {
 .input-cont {
   display: flex;
   flex-direction: column;
+  margin: 2rem;
+  margin-top: 6rem;
 }
 
 label {
@@ -93,24 +100,39 @@ label {
   font-size: 12px;
 }
 
+input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+
+input::before {
+  content: ' SELECT UPLOAD';
+  /* -webkit-user-select: none; */
+}
+
 input {
-  font-family: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  background: rgb(0, 144, 243);
+  letter-spacing: 1px;
+
   border: 2px solid rgb(255, 255, 255);
-  outline: 0;
   font-size: 1.1rem;
-  padding: 7px 0 6px 11px;
-  background: transparent;
-  color: white;
-  margin-bottom: 2rem;
+  padding: 7px 0 5px 24px;
+  /* height: 3rem; */
+  width: 14rem;
+  margin-bottom: 1rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.653), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
+  border-image: linear-gradient(to right, rgb(0, 0, 255), rgb(140, 0, 255), rgb(0, 208, 204));
+  border-image: radial-gradient(circle at 3% 7.4%, rgb(0, 144, 243) 0%, rgb(0, 86, 240) 90%);
+  border-image-slice: 1;
 }
 
 input:focus {
-  padding: 7px 0 6px 11px;
-  border-width: 2px;
-  /* border-image: linear-gradient(to right, rgb(0, 0, 255), rgb(140, 0, 255), rgb(0, 208, 204)); */
-  border-image: radial-gradient(circle at 3% 7.4%, rgb(0, 144, 243) 0%, rgb(0, 86, 240) 90%);
+  border-image: radial-gradient(circle at 3% 7.4%, rgba(0, 146, 243, 0.705) 0%, rgba(0, 84, 240, 0.74) 90%);
   border-image-slice: 1;
 }
 
@@ -143,4 +165,25 @@ input:focus {
     margin-left: 5%;
     margin-right: 2%;
   }
+}
+
+
+/* border: solid 1px silver; */
+
+.img-cont {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+img {
+  height: 390px;
+  width: 390px;
+  background: rgb(27, 27, 27);
+  border: solid 7px rgb(27, 27, 27);
+  object-fit: scale-down;
 }
