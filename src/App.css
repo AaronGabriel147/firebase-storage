@@ -155,17 +155,7 @@ input:focus {
 }
 
 
-@media screen and (max-width: 600px) {
-  p {
-    margin-left: 5%;
-    margin-right: 2%;
-  }
 
-  h1 {
-    margin-left: 5%;
-    margin-right: 2%;
-  }
-}
 
 
 /* border: solid 1px silver; */
@@ -186,4 +176,21 @@ img {
   background: rgb(27, 27, 27);
   border: solid 7px rgb(27, 27, 27);
   object-fit: scale-down;
+}
+
+
+@media screen and (max-width: 600px) {
+  p {
+    margin-left: 5%;
+    margin-right: 2%;
+  }
+
+  h1 {
+    margin-left: 5%;
+    margin-right: 2%;
+  }
+
+  img {
+    width: 100%;
+  }
 }
