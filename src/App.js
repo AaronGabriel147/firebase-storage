@@ -1,6 +1,8 @@
-// Apply database to allow for order, delete, and maybe even full size image on click
+// Add database to allow for order, delete, and maybe even full size image on click
+// Trashcan icon on each image. 
 // Add progress bar
-// MAke image upload busson, 1 button rather than 2!
+// Add 1 image upload button, 1 button rather than 2!
+// Add error messages and edge cases
 
 
 // _____________________________________________________________________
