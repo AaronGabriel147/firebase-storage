@@ -3,15 +3,15 @@ import useFirestore from '../hooks/useFirestore';
 import { motion } from 'framer-motion';
 
 // import { deleteDoc, doc } from "firebase/firestore";
-import { doc, deleteField } from "firebase/firestore";
-import { projectFirestore } from '../firebase';
+// import { doc, deleteField } from "firebase/firestore";
+// import { projectFirestore } from '../firebase';
 
 
+// console.log(docs[0].id);
 
 const ImageGrid = ({ setSelectedImg }) => {
     const { docs } = useFirestore('images');
 
-    console.log(docs[0].id);
 
 
     // const removeQuote = id => deleteDoc(doc(projectFirestore, "images", id))
