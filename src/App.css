@@ -265,6 +265,14 @@ label {
   color: white;
 } */
 
+.delete-img {
+  cursor: pointer;
+  border: solid;
+  /* display: inline-block; */
+  margin-left: 5px;
+  display: inline-block;
+}
+
 
 @media screen and (max-width: 600px) {
   p {
