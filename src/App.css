@@ -169,12 +169,26 @@ input:focus {
   margin-top: 5rem;
 }
 
+.img-box {
+  /* border: solid; */
+  position: relative;
+}
+
 img {
   height: 400px;
   width: 400px;
   background: rgb(27, 27, 27);
   border: solid 7px rgb(27, 27, 27);
   object-fit: scale-down;
+}
+
+.delete-img {
+  /* border: solid; */
+  position: absolute;
+  cursor: pointer;
+  display: inline-block;
+  bottom: 12px;
+  right: 12px;
 }
 
 
@@ -265,13 +279,7 @@ label {
   color: white;
 } */
 
-.delete-img {
-  cursor: pointer;
-  border: solid;
-  /* display: inline-block; */
-  margin-left: 5px;
-  display: inline-block;
-}
+
 
 
 @media screen and (max-width: 600px) {

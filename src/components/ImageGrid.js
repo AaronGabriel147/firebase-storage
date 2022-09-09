@@ -59,20 +59,24 @@ const ImageGrid = ({ setSelectedImg }) => {
                     // onClick={() => setSelectedImg(doc.url)}
                     >
 
+                        <div className="img-box">
 
-                        <motion.img
-                            src={doc.url}
-                            alt='Image'
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 1 }}
-                        />
-                        <div
-                            className='delete-img'
-                            onClick={() => handleDelete(doc)}
-                        >
-                            🗑️
+                            <motion.img
+                                src={doc.url}
+                                alt='Image'
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 1 }}
+                            />
+                            <div
+                                className='delete-img'
+                                onClick={() => handleDelete(doc)}
+                            >
+                                🗑️
+                            </div>
                         </div>
+
+
                     </motion.div>
                 );
             })}
