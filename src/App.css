@@ -169,12 +169,26 @@ input:focus {
   margin-top: 5rem;
 }
 
+.img-box {
+  /* border: solid; */
+  position: relative;
+}
+
 img {
   height: 400px;
   width: 400px;
   background: rgb(27, 27, 27);
   border: solid 7px rgb(27, 27, 27);
   object-fit: scale-down;
+}
+
+.delete-img {
+  /* border: solid; */
+  position: absolute;
+  cursor: pointer;
+  display: inline-block;
+  bottom: 12px;
+  right: 12px;
 }
 
 
@@ -264,6 +278,8 @@ label {
   background: radial-gradient(circle at 3% 7.4%, rgba(0, 146, 243, 0.897) 0%, rgba(3, 91, 255, 0.884) 90%);
   color: white;
 } */
+
+
 
 
 @media screen and (max-width: 600px) {
