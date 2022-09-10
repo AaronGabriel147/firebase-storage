@@ -42,8 +42,9 @@ body {
   min-height: 100vh;
   background-attachment: fixed;
   background-color: #282c34;
+  background-color: rgb(7, 37, 54);
+  /* background: radial-gradient(circle at -0.1% 100.8%, rgb(0, 234, 255) 0.2%, rgb(0, 124, 255) 59.1%, rgb(198, 0, 255) 100.2%); */
   /* background: linear-gradient(#6600FF, #43007e); */
-
 }
 
 
@@ -202,9 +203,10 @@ img {
 }
 
 .progress-bar {
-  height: 5px;
+  height: 7px;
   background: radial-gradient(circle at 3% 7.4%, rgb(0, 144, 243) 0%, rgb(0, 86, 240) 90%);
   margin-top: 20px;
+  width: 700px;
 }
 
 
@@ -249,7 +251,9 @@ form {
 }
 
 span {
-  padding-top: 3rem;
+  margin-top: 9rem;
+  font-size: 1.3rem;
+  font-weight: 100;
 }
 
 label input {
@@ -261,23 +265,21 @@ label input {
 
 label {
   /* display: block; */
+  border-top: 10.5px solid rgba(0, 146, 243, 0);
   width: 350px;
   height: 50px;
-  border-top: 8.5px solid rgb(0, 144, 243);
-  border-radius: 5px;
-  /* margin: 10px auto; */
-  line-height: 30px;
+  border-radius: 3px;
+  /* line-height: 30px; */
   color: white;
-  font-weight: bold;
-  font-size: 24px;
   cursor: pointer;
-  background: rgb(0, 144, 243);
+  background: radial-gradient(circle at 3% 7.4%, rgb(0, 146, 243) 0%, rgb(3, 91, 255) 90%);
+
 }
 
-/* label:hover {
+label:hover {
   background: radial-gradient(circle at 3% 7.4%, rgba(0, 146, 243, 0.897) 0%, rgba(3, 91, 255, 0.884) 90%);
   color: white;
-} */
+}
 
 
 
