@@ -183,13 +183,19 @@ img {
   object-fit: scale-down;
 }
 
-.delete-img {
+
+
+.img-box .delete-img {
   /* border: solid; */
+  display: none;
   position: absolute;
   cursor: pointer;
-  display: inline-block;
   bottom: 12px;
   right: 12px;
+}
+
+.img-box:hover .delete-img {
+  display: inline-block;
 }
 
 
