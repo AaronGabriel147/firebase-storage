@@ -72,7 +72,7 @@ const ImageGrid = ({ setSelectedImg }) => {
                                 className='delete-img'
                                 onClick={() => handleDelete(doc)}
                             >
-                                🗑️
+                                X
                             </div>
                         </div>
 

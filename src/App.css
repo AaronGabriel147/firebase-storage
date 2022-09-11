@@ -192,10 +192,19 @@ img {
   cursor: pointer;
   bottom: 12px;
   right: 12px;
+  background: rgba(0, 0, 0, 0.632);
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .img-box:hover .delete-img {
   display: inline-block;
+}
+
+.delete-img:hover {
+  color: rgb(239, 16, 16);
+  transform: scale(1.2);
+  font-weight: bold;
 }
 
 
