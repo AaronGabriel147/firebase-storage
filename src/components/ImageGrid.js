@@ -31,7 +31,7 @@ const ImageGrid = ({ setSelectedImg }) => {
     const { docs } = useFirestore('images');
 
 
-    const handleDelete = doc => {
+    const handleDelete = (doc) => {
         projectFirestore
             .collection('images')
             .doc(doc.id)
@@ -43,23 +43,24 @@ const ImageGrid = ({ setSelectedImg }) => {
     };
 
 
+
     return (
         <div className="img-cont">
 
             {docs && docs.map(doc => {
                 return (
                     <motion.div key={doc.id}
-                        whileHover={{ opacity: 1 }}
+                        // whileHover={{ opacity: 1 }}
                         layout
-                    // onClick={e =>
-                    // !e.target.classList.contains('delete-img')
-                    // &&
-                    // setSelectedImage(doc.url)
-                    // }
+                        onClick={e =>
+                            !e.target.classList.contains('delete-img')
+                            &&
+                            setSelectedImg(doc.url)
+                        }
                     // onClick={() => setSelectedImg(doc.url)}
                     >
 
-                        <div className="img-box">
+                        <div div className="img-box" >
 
                             <motion.img
                                 src={doc.url}
@@ -77,11 +78,11 @@ const ImageGrid = ({ setSelectedImg }) => {
                         </div>
 
 
-                    </motion.div>
+                    </motion.div >
                 );
             })}
 
-        </div>
+        </div >
     )
 }
 

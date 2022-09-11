@@ -220,7 +220,7 @@ img {
 }
 
 .progress-bar {
-  height: 7px;
+  height: 15px;
   background: radial-gradient(circle at 3% 7.4%, rgb(0, 144, 243) 0%, rgb(0, 86, 240) 90%);
   margin-top: 20px;
   width: 700px;
@@ -229,9 +229,8 @@ img {
 
 .output {
   height: 60px;
-  /* width: 100%; */
+  width: 100%;
   font-size: 0.8rem;
-  /* border: solid red; */
 }
 
 
@@ -315,7 +314,13 @@ label:hover {
   img {
     width: 100vw;
     height: 500px;
-    /* border: solid red; */
   }
 
+  .backdrop img {
+    display: none;
+  }
+
+  .backdrop {
+    display: none;
+  }
 }
