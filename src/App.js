@@ -12,6 +12,7 @@ function App() {
 
   return (
     <div className="app">
+      <h1>Image Gallery</h1>
       <UploadForm />
       <ImageGrid setSelectedImg={setSelectedImg} />
       {selectedImg && (

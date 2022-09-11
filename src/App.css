@@ -38,11 +38,15 @@
 
 
 body {
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
   min-height: 100vh;
   background-attachment: fixed;
-  background-color: #282c34;
-  background-color: rgb(7, 37, 54);
+  /* background-color: rgb(7, 37, 54); */
+
+  background-color: rgb(17, 60, 84);
+
+
+
   /* background: radial-gradient(circle at -0.1% 100.8%, rgb(0, 234, 255) 0.2%, rgb(0, 124, 255) 59.1%, rgb(198, 0, 255) 100.2%); */
   /* background: linear-gradient(#6600FF, #43007e); */
 }
@@ -53,6 +57,7 @@ h1 {
   /* font-size: 4vw; */
   font-size: 3rem;
   word-spacing: .3rem;
+  letter-spacing: 2px;
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
@@ -96,44 +101,6 @@ label {
   font-size: 12px;
 }
 
-/* 
-input::-webkit-file-upload-button {
-  visibility: hidden;
-}
-
-
-input::before {
-  content: ' SELECT UPLOAD';
-}
-
-input {
-  font-weight: 600;
-  text-transform: uppercase;
-  cursor: pointer;
-  outline: none;
-  background: rgb(0, 144, 243);
-  letter-spacing: 1px;
-
-  border: 2px solid rgb(255, 255, 255);
-  font-size: 1.1rem;
-  padding: 7px 0 5px 24px;
-  width: 14rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.653), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-
-  border-image: linear-gradient(to right, rgb(0, 0, 255), rgb(140, 0, 255), rgb(0, 208, 204));
-  border-image: radial-gradient(circle at 3% 7.4%, rgb(0, 144, 243) 0%, rgb(0, 86, 240) 90%);
-  border-image-slice: 1;
-}
-
-input:focus {
-  border-image: radial-gradient(circle at 3% 7.4%, rgba(0, 146, 243, 0.705) 0%, rgba(0, 84, 240, 0.74) 90%);
-  border-image-slice: 1;
-} */
-
-
-
-
 
 
 .app {
@@ -166,8 +133,8 @@ input:focus {
   justify-content: center;
   width: 100%;
   gap: 3rem;
-  margin-bottom: 3rem;
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .img-box {
@@ -178,9 +145,9 @@ input:focus {
 img {
   height: 400px;
   width: 400px;
-  /* background: rgb(27, 27, 27); */
+  background: rgba(27, 27, 27, 0.414);
   /* border: solid 7px rgba(27, 27, 27, 0.62); */
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.653), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.882), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   object-fit: scale-down;
 }
 
