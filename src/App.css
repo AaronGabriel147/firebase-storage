@@ -178,8 +178,9 @@ input:focus {
 img {
   height: 400px;
   width: 400px;
-  background: rgb(27, 27, 27);
-  border: solid 7px rgb(27, 27, 27);
+  /* background: rgb(27, 27, 27); */
+  /* border: solid 7px rgba(27, 27, 27, 0.62); */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.653), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   object-fit: scale-down;
 }
 
@@ -289,6 +290,7 @@ label {
   color: white;
   cursor: pointer;
   background: radial-gradient(circle at 3% 7.4%, rgb(0, 146, 243) 0%, rgb(3, 91, 255) 90%);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.653), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
 }
 
