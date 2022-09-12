@@ -48,7 +48,10 @@ body {
   background-color: rgb(60, 60, 60);
 
 
-
+  background-color: #0A080C;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%230A080C' cx='50' cy='0' r='50'/%3E%3Cg fill='%230c0a0e' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%230e0b10' cx='50' cy='100' r='50'/%3E%3Cg fill='%23100d13' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23120f15' cx='50' cy='200' r='50'/%3E%3Cg fill='%23131117' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%23151219' cx='50' cy='300' r='50'/%3E%3Cg fill='%2317141b' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%2319161d' cx='50' cy='400' r='50'/%3E%3Cg fill='%231b181f' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%231d1a21' cx='50' cy='500' r='50'/%3E%3Cg fill='%231e1c23' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%23201e25' cx='50' cy='600' r='50'/%3E%3Cg fill='%23222027' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%23242229' cx='50' cy='700' r='50'/%3E%3Cg fill='%2326242a' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%2328262c' cx='50' cy='800' r='50'/%3E%3Cg fill='%232a282e' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%232c2b30' cx='50' cy='900' r='50'/%3E%3Cg fill='%232e2d31' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23302F33' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: contain;
   /* background: radial-gradient(circle at -0.1% 100.8%, rgb(0, 234, 255) 0.2%, rgb(0, 124, 255) 59.1%, rgb(198, 0, 255) 100.2%); */
   /* background: linear-gradient(#6600FF, #43007e); */
 }
