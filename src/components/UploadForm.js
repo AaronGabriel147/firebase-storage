@@ -14,16 +14,14 @@ const UploadForm = () => {
         // console.log(selected)
         if (selected && types.includes(selected.type)) {
             setFile(selected);
-            setError(''); // If use selects a valid file after an invalid file.
+            setError(''); // If user selects a valid file after an invalid file.
         } else {
             setFile(null); // If user selected an invalid file.
             setError('Please select a file type of (.PNG, .JPEG, or .GIF)');
         }
     };
 
-
     return (
-
         <form>
             <label>
                 <input type="file" onChange={handleChange} />
@@ -35,8 +33,6 @@ const UploadForm = () => {
                 {file && <ProgressBar file={file} setFile={setFile} />}
             </div>
         </form>
-
     )
 }
-
 export default UploadForm;

@@ -1,13 +1,10 @@
-// Trashcan icon on each image.
-
-
 import "./App.css";
 import React, { useState } from 'react';
 import UploadForm from "./components/UploadForm";
 import ImageGrid from './components/ImageGrid';
 import Modal from './components/Modal';
 
-function App() {
+export default function App() {
   const [selectedImg, setSelectedImg] = useState(null);
 
   return (
@@ -21,8 +18,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
-
-
-
