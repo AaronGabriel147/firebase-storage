@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { projectStorage, projectFirestore, timestamp } from '../firebase';
 
@@ -34,5 +33,3 @@ const useStorage = (file) => {
 }
 
 export default useStorage;
-
-
