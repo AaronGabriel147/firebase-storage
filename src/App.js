@@ -1,72 +1,48 @@
-// Add database to allow for order, delete, and maybe even full size image on click
-// Trashcan icon on each image. 
-// Add progress bar
-// Add 1 image upload button, 1 button rather than 2!
-// Add error messages and edge cases
-
-
-// _____________________________________________________________________
-
-
-
-
 import "./App.css";
 import { useState, useEffect } from "react";
-import {
-  ref,
-  uploadBytes,
-  getDownloadURL,
-  listAll,
-  list,
-} from "firebase/storage";
-import { storage } from "./firebase";
-import { v4 } from "uuid";
+
 
 function App() {
-  const [imageUpload, setImageUpload] = useState(null);
-  const [imageUrls, setImageUrls] = useState([]);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-  const imagesListRef = ref(storage, "images/");
 
-  const uploadFile = () => {
-    if (imageUpload == null) return;
-    const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
-    uploadBytes(imageRef, imageUpload).then((snapshot) => {
-      getDownloadURL(snapshot.ref).then((url) => {
-        setImageUrls((prev) => [...prev, url]);
-      });
-    });
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log("submit.");
   };
-
-  useEffect(() => {
-    listAll(imagesListRef).then((response) => {
-      response.items.forEach((item) => {
-        getDownloadURL(item).then((url) => {
-          setImageUrls((prev) => [...prev, url]);
-        });
-      });
-    });
-  }, []);
-
-
-  // console.log('@@@', imageUrls)
 
   return (
     <div className="app">
+      <h1>Create Account</h1>
 
-      <input
-        type="file"
-        onChange={(event) => setImageUpload(event.target.files[0])}
-      />
+      <form onSubmit={submitHandler}>
+        <div className="input-cont">
+          <label>Username</label>
+          <input
+            type="username"
+            placeholder="Enter username*"
+            name="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
 
-      <button onClick={uploadFile}>Submit Upload</button>
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="Enter password*"
+            name="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
-      <div className="img-cont">
-        {imageUrls.reverse().map((url, id) => {
-          console.log('yolo!!', url)
-          return < img src={url} key={id} />
-        })}
-      </div>
+
+          <button>SUBMIT</button>
+        </div>
+      </form>
+
+
 
     </div>
   );
