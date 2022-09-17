@@ -1,108 +1,94 @@
 import "./App.css";
-import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import data from "./mock-data.json";
 
+
+// <th>  is a table header, the bolded text on the top of the table.
+// <td>  is a table data, the text in the table.
+// <tr>  is a table row, the text in the table.
+// <table>  is a table, the table itself.
+
+// <thead>  is a table head, the text in the table.
+// <tbody>  is a table body, the text in the table.
+// The <tbody> tag is used to group the body content in an HTML table.
+// The <tbody> element is used in conjunction with the <thead> and <tfoot> elements to specify each part of a table (body, header, footer).
 
 function App() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [contacts, setContacts] = useState(data);
 
-  const [quotes, setQuotes] = useState([{
-    author: ''
-  }]);
 
   const submitHandler = (e) => {
     e.preventDefault();
-    setUsername('')
-  };
-
-
-  useEffect(() => {
-    axios
-      .get('https://thestoics.herokuapp.com/quotes/1170')
-      .then(res => {
-        setQuotes(res.data)
-        console.log('@@@', quotes)
-
-      })
-      .catch(err => console.log(err))
-  }, [])
-
-  console.log('@@@', quotes).author
+    console.log('@@')
+  }
 
   return (
     <div className="app">
-      <h1>Create Account</h1>
-
+      {/* Form. */}
       <form onSubmit={submitHandler}>
+        <h2>Add Contact</h2>
         <div className="input-cont">
-          <label>Username</label>
+
+          <label>Full Name</label>
           <input
-            type="username"
-            placeholder="Enter username*"
-            name="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            type="text"
+            name="fullName"
+            placeholder="Full Name*"
+            value={contacts.fullName}
+            onChange={(e) => setContacts(e.target.value)}
           />
 
-          <label>Password</label>
+          <label>Adress</label>
           <input
-            type="password"
-            placeholder="Enter password*"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            type="text"
+            name="address"
+            placeholder="Address*"
+          // onChange={ }
+          />
+
+          <label>Phone Number</label>
+          <input
+            type="text"
+            name="phoneNumber"
+            placeholder="Phone Number*"
+          // onChange={ }
+          />
+
+          <label>Email</label>
+          <input
+            type="text"
+            name="email"
+            placeholder="Email*"
+          // onChange={ }
           />
 
           <button>SUBMIT</button>
         </div>
       </form>
 
+      <table>
+        {/* After table head tags we will create the table body. */}
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+          </tr>
+        </thead>
 
-      <div className="line-separator"></div>
-
-
-      <div>
-
-        {quotes.map((quote, index) => (
-          <div key={index}>
-            <h2>{quote.author}</h2>
-          </div>
-        ))}
-      </div>
-
-
-      {/* {quotes.sort((a, b) => a.id - b.id).reverse().map((quote) => (
-                    <div className='card-container' key={"card-container-" + quote.id}>
-                        <div className="card-text">
-                            <p>{quote.author}</p>
-                            <p>{quote.source}</p>
-                        </div>
-                        <p className='quote-text'>{quote.quote}</p>
-                        <div className="update-delete-buttons">
-
-
-                            <Delete
-                                quotes={quotes}
-                                setQuotes={setQuotes}
-                                id={quote.id}
-                            />
-
-                            <Update
-                                quote={quote}
-                                quotes={quotes}
-                                setQuotes={setQuotes}
-                                setFormData={setFormData}
-                            />
-
-                        </div>
-                    </div>
-                ))} */}
-
-
-
-
-
+        {/* Table body. */}
+        <tbody>
+          {contacts.map((item, index) => (
+            <tr key={index}>
+              <td>{item.fullName}</td>
+              <td>{item.address}</td>
+              <td>{item.phoneNumber}</td>
+              <td>{item.email}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div >
   );
 }
