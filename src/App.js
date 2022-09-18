@@ -37,6 +37,7 @@ function App() {
 
   return (
     <div className="app">
+      <h1>FYC</h1>
       <Form data={data} setData={setData} formData={formData} setFormData={setFormData} />
       <table>
         <TableHead />

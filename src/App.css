@@ -76,21 +76,23 @@ form {
   align-content: center;
   align-items: center;
   border: 1px solid rgb(200, 200, 200);
-  box-shadow: 0px 2px 11px #c6c6c6;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.653), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   background: rgba(141, 141, 141, 0.189);
   backdrop-filter: blur(10px);
   backdrop-filter: saturate(10%) blur(8px);
 }
 
 h1 {
-  font-weight: 600;
+  /* font-weight: 600; */
   /* font-size: 4vw; */
-  color: white;
-  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  font-size: 3.5rem;
   word-spacing: .3rem;
-  /* margin-top: 3rem; */
+  margin-top: 3rem;
   margin-bottom: 2rem;
-  text-shadow: 1px 3px 6px black;
+  /* text-shadow: 1px 3px 6px black; */
+  text-shadow: 0px 7px 15px black;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -167,7 +169,7 @@ input {
   border: 2px solid rgb(71, 71, 71);
   outline: 0;
   font-size: 1.0625rem;
-  padding: 7px 0 6px 11px;
+  padding: 5px 0 6px 11px;
   /* background: transparent; */
   color: black;
   margin-bottom: 1.5rem;
@@ -177,7 +179,7 @@ input {
 }
 
 input:focus {
-  padding: 7px 0 6px 11px;
+  padding: 5px 0 6px 11px;
   border-width: 3px;
   /* border-image: linear-gradient(to right, rgb(0, 0, 255), rgb(140, 0, 255), rgb(0, 208, 204)); */
   border-image: radial-gradient(circle at 3% 7.4%, rgb(0, 144, 243) 0%, rgb(0, 86, 240) 90%);
@@ -232,7 +234,7 @@ table {
   width: 100%;
   max-width: 1000px;
   min-width: 700px;
-  box-shadow: 2px 0px 15px #9f9f9f;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.653), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   border: 5px solid rgb(255, 255, 255);
   margin-bottom: 6rem;
 }
