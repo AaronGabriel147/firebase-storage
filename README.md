@@ -23,3 +23,60 @@ Blank React template with all the useless things deleted and some starter CSS ad
           {JSON.stringify(item.source)}
         </div>
       ))}
+
+
+
+
+
+
+
+
+          // const onSearch = (searchItem) => {
+    //     // Our API to fetch the search*
+    //     console.log('%%%', searchItem)
+    // };
+
+
+
+
+                <input
+                id="autocomplete-input"
+                type="text"
+                name="autocomplete"
+                debounceTimeout={600}
+                value={searchInputValue}
+                onChange={(e) => setSearchInputValue(e.target.searchInputValue)}
+            />
+            <button>Search</button>
+
+
+
+
+
+
+
+
+
+
+
+
+                useEffect(() => {
+        if (searchInputValue === "") setFilteredData(data);
+        else {
+            const x = data.filter((item) => {
+                let filteredItem;
+                if (filterDropDownValue === "author") {
+                    filteredItem = item.author.toLowerCase().includes(searchInputValue.toLowerCase());
+                }
+                return filteredItem
+            });
+            setFilteredData(x)
+        }
+    }, [searchInputValue, filterDropDownValue, data, setFilteredData])
+
+
+
+
+
+// const [searchInputValue, setSearchInputValue] = useState("");
+// const [filterDropDownValue, setFilterDropDownValue] = useState("author");

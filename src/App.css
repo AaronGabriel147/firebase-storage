@@ -186,6 +186,11 @@ input:focus {
   border-image-slice: 1;
 }
 
+#autocomplete-input {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
 
 .app {
   display: flex;
@@ -209,18 +214,11 @@ input:focus {
 
 
 
-@media screen and (max-width: 600px) {
-  p {
-    margin-left: 5%;
-    margin-right: 2%;
-  }
-
-  h1 {
-    margin-left: 5%;
-    margin-right: 2%;
-  }
+code {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
 }
-
 
 
 

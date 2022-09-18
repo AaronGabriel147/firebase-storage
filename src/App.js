@@ -1,8 +1,9 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Form from './components/Form.jsx';
+import Form from './components/Form';
 import TableHead from './components/TableHead';
+import Autocomplete from "./components/Autocomplete";
 
 
 function App() {
@@ -12,9 +13,11 @@ function App() {
     source: "",
     quote: ""
   });
+  const [filteredData, setFilteredData] = useState([]);
 
 
   // https://jsonplaceholder.typicode.com/posts
+  // .get("https://jsonplaceholder.typicode.com/users")
   useEffect(() => {
     axios
       .get('https://thestoics.herokuapp.com/quotes')
@@ -27,9 +30,7 @@ function App() {
     if (window.confirm('Are you sure you want to delete this row?')) {
       axios
         .delete(`https://thestoics.herokuapp.com/quotes/${id}`)
-        .then(res => {
-          setData(data.filter(item => item.id !== id));
-        })
+        .then(res => setData(data.filter(item => item.id !== id)))
         .catch(err => console.log(err));
     }
   }
@@ -37,7 +38,8 @@ function App() {
 
   return (
     <div className="app">
-      <h1>FYC</h1>
+      <Autocomplete filteredData={filteredData} setFilteredData={setFilteredData} data={data} />
+      <h1>Table</h1>
       <Form data={data} setData={setData} formData={formData} setFormData={setFormData} />
       <table>
         <TableHead />
