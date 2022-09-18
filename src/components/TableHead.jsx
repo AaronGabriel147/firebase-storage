@@ -7,7 +7,7 @@ export default function TableHead() {
                 <th>Author</th>
                 <th>Source</th>
                 <th>Quote</th>
-                <th>Actions</th>
+                <th>Delete</th>
             </tr>
         </thead>
     )

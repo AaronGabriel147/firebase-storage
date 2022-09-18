@@ -4,18 +4,6 @@ import axios from 'axios';
 
 export default function Form({ data, setData, formData, setFormData }) {
 
-    // Version without a POST API call. 
-    // const submitHandler = (e) => {
-    //     e.preventDefault();
-    //     setData([...data, formData]);
-    //     e.target.reset();
-    //     setFormData({
-    //         author: "",
-    //         source: "",
-    //         quote: "",
-    //     });
-    // };
-
     const submitHandler = (e) => {
         e.preventDefault();
         axios
@@ -45,7 +33,7 @@ export default function Form({ data, setData, formData, setFormData }) {
         <form onSubmit={submitHandler}>
             <div className="input-cont">
 
-                <label>Full Name</label>
+                <label>Author</label>
                 <input
                     name="author"
                     placeholder="Author*"
@@ -53,7 +41,7 @@ export default function Form({ data, setData, formData, setFormData }) {
                     onChange={changeHandler}
                 />
 
-                <label>Address</label>
+                <label>Source</label>
                 <input
                     name="source"
                     placeholder="Source*"
@@ -61,7 +49,7 @@ export default function Form({ data, setData, formData, setFormData }) {
                     onChange={changeHandler}
                 />
 
-                <label>Phone Number</label>
+                <label>Quote</label>
                 <input
                     name="quote"
                     placeholder="Quote*"

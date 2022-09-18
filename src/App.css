@@ -133,12 +133,15 @@ button:hover {
 
 #delete-btn {
   background: white;
-  background: rgb(142, 143, 145);
-
+  color: black;
+  border-radius: 0;
+  /* background: rgb(142, 143, 145); */
   min-width: 20px;
   margin-top: 0;
   height: 30px;
   padding: 5px 10px;
+  margin-left: 25%;
+
 }
 
 #delete-btn:hover {
@@ -168,14 +171,14 @@ input {
   /* background: transparent; */
   color: black;
   margin-bottom: 1.5rem;
-  border: 2px solid rgb(99, 99, 99);
+  border: 3px solid rgba(99, 99, 99, 0.81);
   /* margin-top: 1rem; */
   /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.653), 0 4px 6px -4px rgb(0 0 0 / 0.1); */
 }
 
 input:focus {
   padding: 7px 0 6px 11px;
-  border-width: 2px;
+  border-width: 3px;
   /* border-image: linear-gradient(to right, rgb(0, 0, 255), rgb(140, 0, 255), rgb(0, 208, 204)); */
   border-image: radial-gradient(circle at 3% 7.4%, rgb(0, 144, 243) 0%, rgb(0, 86, 240) 90%);
   border-image-slice: 1;
@@ -234,6 +237,7 @@ table {
   margin-bottom: 6rem;
 }
 
+
 th,
 td {
   border: 2px solid #ffffff;
@@ -244,24 +248,11 @@ td {
 
 th {
   background-color: rgb(142, 143, 145);
-  color: black;
+  color: rgb(43, 43, 43);
+  font-size: 1.2rem;
 }
 
 td {
   background-color: rgb(224, 224, 224);
   color: black;
 }
-
-/* form {
-  display: flex;
-  gap: 5px;
-}
-
-form td:last-child {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-form * {
-  font-size: 28px;
-} */
