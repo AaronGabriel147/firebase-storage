@@ -36,12 +36,12 @@ const ImageGrid = ({ setSelectedImg }) => {
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 1 }}
                             />
-                            <div
+                            {/* <div
                                 className='delete-img'
                                 onClick={() => handleDelete(doc)}
                             >
                                 X
-                            </div>
+                            </div> */}
                         </div>
                     </motion.div >
                 );

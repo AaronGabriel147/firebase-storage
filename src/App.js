@@ -11,7 +11,6 @@ export default function App() {
 
   return (
     <div className="app">
-      {/* <h1>Image Gallery</h1> */}
       <h1>Aaron Gabriel</h1>
       <h2>Project Gallery</h2>
       <UploadForm />
