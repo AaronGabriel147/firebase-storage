@@ -38,7 +38,7 @@
 }
 
 html {
-  background-color: rgb(67, 67, 67);
+  background-color: rgb(58, 0, 248);
 
 }
 
@@ -47,7 +47,7 @@ body {
   min-height: 100vh;
   background-attachment: fixed;
   /* background-color: rgb(7, 37, 54); */
-  background-color: rgb(67, 67, 67);
+  background-color: rgb(51, 56, 63);
 
   /* background-image: linear-gradient(180deg, #343434 0%, #343434 0%); */
 
@@ -65,13 +65,39 @@ body {
 h1 {
   font-family: 'Chakra Petch', sans-serif;
   /* font-size: 4vw; */
-  font-size: 3.2rem;
+  /* font-size: 3.2rem; */
+  font-size: 2.8rem;
+
+
   word-spacing: .3rem;
   letter-spacing: 2px;
   margin-top: 3rem;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
   /* padding-right: 1px; */
   text-shadow: 2px 6px 10px black;
+}
+
+h2 {
+  font-family: 'Chakra Petch', sans-serif;
+  /* font-size: 4vw; */
+  /* font-size: 3.2rem; */
+  font-size: 2.8rem;
+
+  word-spacing: .3rem;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  /* padding-right: 1px; */
+  text-shadow: 2px 6px 10px black;
+}
+
+
+
+h5 {
+  font-weight: 100;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
 
@@ -116,6 +142,12 @@ label {
 
 
 .app {
+
+  min-height: 100vh;
+  max-height: 100%;
+  margin: auto;
+
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -298,4 +330,41 @@ label:hover {
     border-right: none;
   }
 
+}
+
+
+.footer {
+  margin-top: auto;
+  border-top: solid rgba(200, 200, 200, 0.356) 1px;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  background: radial-gradient(circle at 3% 7.4%, rgb(0, 146, 243) 0%, rgb(3, 91, 255) 90%);
+  min-height: 80px;
+  word-spacing: 1px;
+  /* position: relative; */
+}
+
+/* #little {
+  width: 70px;
+  right: 0;
+  bottom: 0;
+  border: solid rgb(226, 81, 81);
+  position: absolute;
+} */
+
+#footer-txt {
+  /* color: rgb(184, 184, 184); */
+  color: black;
+  font-weight: 400;
+  font-size: 1.1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
 }

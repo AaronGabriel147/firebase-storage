@@ -6,9 +6,7 @@ const ProgressBar = ({ file, setFile }) => {
     const { progress, url } = useStorage(file);
 
     useEffect(() => {
-        if (url) {
-            setFile(null);
-        }
+        if (url) setFile(null);
     }, [url, setFile]);
 
     return (
