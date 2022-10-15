@@ -31,7 +31,7 @@ const ImageGrid = ({ setSelectedImg }) => {
                         <div div className="img-box" >
                             <motion.img
                                 src={doc.url}
-                                alt='Image'
+                                alt='Out of free bandwith for the day. Check back tomorrow.'
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 1 }}
