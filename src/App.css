@@ -38,11 +38,10 @@
 
 body {
   height: 100vh;
+  max-width: 100vw;
   background-attachment: fixed;
   /* background-color: #282c34; */
-  /* background-repeat: no-repeat; */
   background-position: center;
-  /* background-size: cover; */
   min-height: -webkit-fill-available;
   margin-bottom: 9rem;
   /* background: linear-gradient(#6600FF, #43007e); */

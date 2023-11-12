@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Form from './components/Form';
 import TableHead from './components/TableHead';
-import Autocomplete from "./components/Autocomplete";
+// import Autocomplete from "./components/Autocomplete";
 
 
 function App() {
@@ -13,23 +13,28 @@ function App() {
     source: "",
     quote: ""
   });
-  const [filteredData, setFilteredData] = useState([]);
+  // const [filteredData, setFilteredData] = useState([]);
 
 
   // https://jsonplaceholder.typicode.com/posts
   // .get("https://jsonplaceholder.typicode.com/users")
   useEffect(() => {
     axios
-      .get('https://thestoics.herokuapp.com/quotes')
-      .then(res => setData(res.data))
-      .catch(err => console.log(err))
-  }, [])
+      // .get('https://thestoics.herokuapp.com/quotes')
+      .get("https://jsonplaceholder.typicode.com/users")
+      .then(res => {
+        setData(res.data);
+        // console.log('@@@@', res.data);
+      })
+      .catch(err => console.log(err));
+  }, []);
 
 
   const deleteHandler = (id) => {
     if (window.confirm('Are you sure you want to delete this row?')) {
       axios
-        .delete(`https://thestoics.herokuapp.com/quotes/${id}`)
+        // .delete(`https://thestoics.herokuapp.com/quotes/${id}`)
+        .delete(`https://jsonplaceholder.typicode.com/users/${id}`)
         .then(res => setData(data.filter(item => item.id !== id)))
         .catch(err => console.log(err));
     }
@@ -38,7 +43,7 @@ function App() {
 
   return (
     <div className="app">
-      <Autocomplete filteredData={filteredData} setFilteredData={setFilteredData} data={data} />
+      {/* <Autocomplete filteredData={filteredData} setFilteredData={setFilteredData} data={data} /> */}
       <h1>Table</h1>
       <Form data={data} setData={setData} formData={formData} setFormData={setFormData} />
       <table>
@@ -46,10 +51,14 @@ function App() {
         <tbody>
           {data.sort((a, b) => a.id - b.id).reverse().map((item) => (
             <tr key={item.id}>
-              {/* {console.log('### Map', item)} */}
-              <td>{item.author}</td>
+              {console.log('### Map', item)}
+              {/* <td>{item.author}</td>
               <td>{item.source}</td>
-              <td>{item.quote}</td>
+              <td>{item.quote}</td> */}
+
+              <td>{item.name}</td>
+              <td>{item.phone}</td>
+              <td>{item.website}</td>
               <td><button id="delete-btn" onClick={() => deleteHandler(item.id)}>X</button></td>
             </tr>
           ))}

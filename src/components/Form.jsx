@@ -33,26 +33,26 @@ export default function Form({ data, setData, formData, setFormData }) {
         <form onSubmit={submitHandler}>
             <div className="input-cont">
 
-                <label>Author</label>
+                <label>Name</label>
                 <input
-                    name="author"
-                    placeholder="Author*"
+                    name="Name"
+                    placeholder="Name*"
                     value={formData.author}
                     onChange={changeHandler}
                 />
 
-                <label>Source</label>
+                <label>Phone</label>
                 <input
-                    name="source"
-                    placeholder="Source*"
+                    name="Phone"
+                    placeholder="Phone*"
                     value={formData.source}
                     onChange={changeHandler}
                 />
 
-                <label>Quote</label>
+                <label>Website</label>
                 <input
-                    name="quote"
-                    placeholder="Quote*"
+                    name="Website"
+                    placeholder="Website*"
                     value={formData.quote}
                     onChange={changeHandler}
                 />

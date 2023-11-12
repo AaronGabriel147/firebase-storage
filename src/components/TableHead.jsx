@@ -4,9 +4,9 @@ export default function TableHead() {
     return (
         <thead>
             <tr>
-                <th>Author</th>
-                <th>Source</th>
-                <th>Quote</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Website</th>
                 <th>Delete</th>
             </tr>
         </thead>
