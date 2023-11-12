@@ -11,9 +11,9 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1>Image Gallery</h1>
-      <p id="subtitle">Feel free to upload & delete anything</p>
-      <UploadForm />
+      <h1>Aarons Image Gallery</h1>
+      {/* <p id="subtitle">Feel free to upload & delete anything</p> */}
+      {/* <UploadForm /> */}
       <ImageGrid setSelectedImg={setSelectedImg} />
       {selectedImg && (
         <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
